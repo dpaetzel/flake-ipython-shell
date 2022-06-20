@@ -7,7 +7,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       with import nixpkgs { inherit system; }; {
 
-        defaultPackage = nixpkgs.legacyPackages.${system}.python39.withPackages
+        defaultPackage = nixpkgs.legacyPackages.${system}.python310.withPackages
           (pkgs: with pkgs; [ ipython matplotlib numpy pandas scipy ]);
 
         defaultApp = flake-utils.lib.mkApp {
